@@ -91,8 +91,9 @@
     transform: none;
     min-width: 120px;
   }
+}
 
-  .tools-title {
+.tools-title {
   margin-top: 40px;
   text-align: center;
   font-size: 1.5rem;
@@ -127,4 +128,4 @@
   font-size: 1rem;
   color: #555;
 }
-}
+
