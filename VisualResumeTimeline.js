@@ -55,4 +55,3 @@ const VisualResumeTimeline = () => {
 
 export default VisualResumeTimeline;
 
-export default VisualResumeTimeline;
