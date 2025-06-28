@@ -2,26 +2,18 @@ import React, { useState } from "react";
 import "./VisualResumeTimeline.css";
 
 const events = [
-  {
-    date: "2018",
-    title: "Graduated from University",
-    description: "Completed B.Tech in Computer Science at ABC University.",
-  },
-  {
-    date: "2019",
-    title: "Joined XYZ Corp",
-    description: "Worked as a Software Engineer in frontend development.",
-  },
-  {
-    date: "2021",
-    title: "Promoted to Senior Engineer",
-    description: "Led a team of 5 to deliver critical projects.",
-  },
-  {
-    date: "2023",
-    title: "Started Freelancing",
-    description: "Worked on multiple web and mobile projects for global clients.",
-  },
+  { date: "2018", title: "Graduated", description: "Completed B.Tech in CSE." },
+  { date: "2019", title: "Joined XYZ Corp", description: "Software Engineer Role." },
+  { date: "2021", title: "Senior Engineer", description: "Led key projects." },
+  { date: "2023", title: "Started Freelancing", description: "Global web & mobile projects." },
+];
+
+const tools = [
+  { name: "JavaScript", icon: "🟨" },
+  { name: "React", icon: "⚛️" },
+  { name: "Node.js", icon: "🟩" },
+  { name: "AWS Certified", icon: "☁️" },
+  { name: "Docker", icon: "🐳" },
 ];
 
 const VisualResumeTimeline = () => {
@@ -47,8 +39,20 @@ const VisualResumeTimeline = () => {
           </div>
         ))}
       </div>
+
+      <h2 className="tools-title">My Tools, Certifications & Badges</h2>
+      <div className="tools-section">
+        {tools.map((tool, index) => (
+          <div className="tool-item" key={index} title={tool.name}>
+            <span className="tool-icon">{tool.icon}</span>
+            <div className="tool-name">{tool.name}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
+
+export default VisualResumeTimeline;
 
 export default VisualResumeTimeline;
